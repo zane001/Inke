@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZMLiveChatViewController">
+            <connections>
+                <outlet property="iconView" destination="DDX-ql-fjs" id="bfd-KI-5oa"/>
+                <outlet property="peopleWatch" destination="5vD-HW-5X5" id="QsO-dg-NYz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZ4-N9-rJd">
+                    <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mg_room_btn_liao_h" translatesAutoresizingMaskIntoConstraints="NO" id="DxR-M1-BVy">
+                            <rect key="frame" x="10" y="10" width="40" height="40"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mg_room_btn_xinxi_h" translatesAutoresizingMaskIntoConstraints="NO" id="rI5-Om-EEe">
+                            <rect key="frame" x="175" y="10" width="40" height="40"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mg_room_btn_liwu_h" translatesAutoresizingMaskIntoConstraints="NO" id="Enm-44-ZyQ">
+                            <rect key="frame" x="225" y="10" width="40" height="40"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mg_room_btn_fenxiang_h" translatesAutoresizingMaskIntoConstraints="NO" id="zCj-fX-IPZ">
+                            <rect key="frame" x="275" y="10" width="40" height="40"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="0Pd-th-r6d"/>
+                        <constraint firstItem="Enm-44-ZyQ" firstAttribute="leading" secondItem="rI5-Om-EEe" secondAttribute="trailing" constant="10" id="7fC-fN-tWm"/>
+                        <constraint firstItem="DxR-M1-BVy" firstAttribute="leading" secondItem="OZ4-N9-rJd" secondAttribute="leading" constant="10" id="FzB-Lw-1RM"/>
+                        <constraint firstItem="rI5-Om-EEe" firstAttribute="centerY" secondItem="DxR-M1-BVy" secondAttribute="centerY" id="bnb-OK-Kvv"/>
+                        <constraint firstItem="zCj-fX-IPZ" firstAttribute="leading" secondItem="Enm-44-ZyQ" secondAttribute="trailing" constant="10" id="eOt-zh-cey"/>
+                        <constraint firstAttribute="trailing" secondItem="zCj-fX-IPZ" secondAttribute="trailing" constant="60" id="fP0-8B-Qg9"/>
+                        <constraint firstItem="Enm-44-ZyQ" firstAttribute="centerY" secondItem="DxR-M1-BVy" secondAttribute="centerY" id="fta-Wc-xgT"/>
+                        <constraint firstAttribute="bottom" secondItem="DxR-M1-BVy" secondAttribute="bottom" constant="10" id="rTi-08-k5l"/>
+                        <constraint firstItem="zCj-fX-IPZ" firstAttribute="centerY" secondItem="DxR-M1-BVy" secondAttribute="centerY" id="xI4-5h-wSy"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mg_room_touxiang" translatesAutoresizingMaskIntoConstraints="NO" id="TqI-nD-7tv">
+                    <rect key="frame" x="10" y="30" width="87" height="32"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DDX-ql-fjs">
+                    <rect key="frame" x="11" y="31" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="vcs-Kc-gpg"/>
+                        <constraint firstAttribute="width" constant="30" id="yxC-RS-SyS"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vD-HW-5X5">
+                    <rect key="frame" x="43" y="48" width="35" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="1fd-dh-efB"/>
+                        <constraint firstAttribute="height" constant="12" id="asa-Cf-C3f"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KS7-w1-jYq">
+                    <rect key="frame" x="0.0" y="72" width="100" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="giR-Rh-Ghq"/>
+                        <constraint firstAttribute="width" constant="100" id="hZw-xz-J4L"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="映票 0" backgroundImage="mg_room_映票_底">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="TqI-nD-7tv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="8Mv-uS-XLi"/>
+                <constraint firstItem="DDX-ql-fjs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="31" id="LDQ-EZ-HNS"/>
+                <constraint firstAttribute="trailing" secondItem="OZ4-N9-rJd" secondAttribute="trailing" id="LK7-HM-FM8"/>
+                <constraint firstAttribute="bottom" secondItem="OZ4-N9-rJd" secondAttribute="bottom" id="Xml-5p-P99"/>
+                <constraint firstItem="5vD-HW-5X5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="48" id="cij-qM-MfP"/>
+                <constraint firstItem="OZ4-N9-rJd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hp1-tk-K9X"/>
+                <constraint firstItem="TqI-nD-7tv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="pvN-Dl-9Es"/>
+                <constraint firstItem="5vD-HW-5X5" firstAttribute="leading" secondItem="DDX-ql-fjs" secondAttribute="trailing" constant="2" id="qRo-xG-fJM"/>
+                <constraint firstItem="KS7-w1-jYq" firstAttribute="top" secondItem="TqI-nD-7tv" secondAttribute="bottom" constant="10" id="vrx-Z0-qBl"/>
+                <constraint firstItem="KS7-w1-jYq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="x45-gG-SrQ"/>
+                <constraint firstItem="DDX-ql-fjs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="11" id="yjy-jb-moE"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mg_room_btn_fenxiang_h" width="40" height="40"/>
+        <image name="mg_room_btn_liao_h" width="40" height="40"/>
+        <image name="mg_room_btn_liwu_h" width="40" height="40"/>
+        <image name="mg_room_btn_xinxi_h" width="40" height="40"/>
+        <image name="mg_room_touxiang" width="87" height="32"/>
+        <image name="mg_room_映票_底" width="138" height="22"/>
+    </resources>
+</document>
