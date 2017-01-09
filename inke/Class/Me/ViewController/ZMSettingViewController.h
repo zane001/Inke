@@ -10,10 +10,6 @@
 
 @interface ZMSettingViewController : UIViewController
 
--(long long)fileSizeAtPath:(NSString *)path;
 
--(float)folderSizeAtPath:(NSString *)path;
-
--(void)clearCache:(NSString *)path;
 
 @end

@@ -71,6 +71,7 @@
 		988E98331DEF0F1D00C64ACD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988E98321DEF0F1D00C64ACD /* QuartzCore.framework */; };
 		988E98351DEF0F2D00C64ACD /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988E98341DEF0F2D00C64ACD /* VideoToolbox.framework */; };
 		988E98381DEF14B000C64ACD /* ZMPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 988E98371DEF14B000C64ACD /* ZMPlayerViewController.m */; };
+		989831DE1E23E38C00ED816C /* ZMClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 989831DD1E23E38C00ED816C /* ZMClearCacheCell.m */; };
 		989CC3651E0AE41D00D1A66B /* AppDelegate+ZMUmeng.m in Sources */ = {isa = PBXBuildFile; fileRef = 989CC3641E0AE41D00D1A66B /* AppDelegate+ZMUmeng.m */; };
 		98B74C0C1E01947B0045DCA0 /* ZMAdvertiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98B74C0B1E01947B0045DCA0 /* ZMAdvertiseViewController.xib */; };
 		98F5EC681DFC35DF00C92627 /* ZMLiveChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F5EC661DFC35DF00C92627 /* ZMLiveChatViewController.m */; };
@@ -195,6 +196,8 @@
 		988E98341DEF0F2D00C64ACD /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		988E98361DEF14B000C64ACD /* ZMPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMPlayerViewController.h; sourceTree = "<group>"; };
 		988E98371DEF14B000C64ACD /* ZMPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMPlayerViewController.m; sourceTree = "<group>"; };
+		989831DC1E23E38C00ED816C /* ZMClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMClearCacheCell.h; sourceTree = "<group>"; };
+		989831DD1E23E38C00ED816C /* ZMClearCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMClearCacheCell.m; sourceTree = "<group>"; };
 		989CC3601E0AD45500D1A66B /* libLFLiveKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLFLiveKit.a; path = "../../../Library/Developer/Xcode/DerivedData/inke-aydasprowhchrggullwqxjajcnpx/Build/Products/Debug-iphonesimulator/LFLiveKit/libLFLiveKit.a"; sourceTree = "<group>"; };
 		989CC3631E0AE41D00D1A66B /* AppDelegate+ZMUmeng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+ZMUmeng.h"; sourceTree = "<group>"; };
 		989CC3641E0AE41D00D1A66B /* AppDelegate+ZMUmeng.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ZMUmeng.m"; sourceTree = "<group>"; };
@@ -515,6 +518,8 @@
 				98776CD91E0C0DA000B200DD /* ZMMeInfoView.h */,
 				98776CDA1E0C0DA000B200DD /* ZMMeInfoView.m */,
 				98776CDC1E0C0DC900B200DD /* ZMMeInfoView.xib */,
+				989831DC1E23E38C00ED816C /* ZMClearCacheCell.h */,
+				989831DD1E23E38C00ED816C /* ZMClearCacheCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -792,6 +797,7 @@
 				987043F71DC78D71009765B8 /* AppDelegate.m in Sources */,
 				982098551E06810A0099550B /* LFLivePreview.m in Sources */,
 				98F5EC681DFC35DF00C92627 /* ZMLiveChatViewController.m in Sources */,
+				989831DE1E23E38C00ED816C /* ZMClearCacheCell.m in Sources */,
 				982098431E02D4A80099550B /* ZMCacheHelper.m in Sources */,
 				98776CD31E0BFF2800B200DD /* ZMUserHelper.m in Sources */,
 				986B60FE1DD21A3500674D25 /* ZMHotViewController.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import "ZMSettingViewController.h"
-#import "SDImageCache.h"
+#import "ZMClearCacheCell.h"
 #import "ZMSetting.h"
 
 @interface ZMSettingViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -17,6 +17,7 @@
 
 @end
 
+static NSString *const ZMClearCacheCellID = @"ClearCache";
 @implementation ZMSettingViewController
 
 
@@ -59,6 +60,9 @@
     [self.view addSubview:self.tableView];
     self.title = @"设置";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
+    // 注册自定义的Cell
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ZMClearCacheCellID];
 }
 
 - (void)loadData {
@@ -120,9 +124,12 @@
     return arr.count;
 }
 
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ZMSetting *set = self.dataList[indexPath.section][indexPath.row];
     UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+
     cell.textLabel.text = set.title;
     cell.textLabel.textColor = [UIColor lightGrayColor];
     if (indexPath.section == 1 && indexPath.row == 2) {
@@ -130,12 +137,8 @@
         [switchView setOn:YES];
         cell.accessoryView = switchView;
     } else if (indexPath.section == 2 && indexPath.row == 0) {
-        UILabel *cacheSizeLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, cell.height)];
-        cacheSizeLabel.textAlignment = NSTextAlignmentRight;
-        CGFloat cacheSize = [self folderSizeAtPath:@""];
-        cacheSizeLabel.text = [NSString stringWithFormat:@"%g M", cacheSize];
-        cacheSizeLabel.textColor = [UIColor lightGrayColor];
-        cell.accessoryView = cacheSizeLabel;
+        return [[ZMClearCacheCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ZMClearCacheCellID];
+
     } else {
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
@@ -150,64 +153,15 @@
     return 5;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//
+//    if (indexPath.section == 2 && indexPath.row == 0) {
+//
+//        [self clearCache:@""];
+//    }
+//    
+//}
 
-    [self clearCache:@""];
-    
-}
-
--(long long)fileSizeAtPath:(NSString *)path {
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    if([fileManager fileExistsAtPath:path]) {
-        long long size = [fileManager attributesOfItemAtPath:path error:nil].fileSize;
-        return size;
-    }
-    return 0;
-}
-
--(float)folderSizeAtPath:(NSString *)path{
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
-    cachePath = [cachePath stringByAppendingPathComponent:path];
-    long long folderSize = 0;
-    if ([fileManager fileExistsAtPath:cachePath])
-    {
-        NSArray *childerFiles = [fileManager subpathsAtPath:cachePath];
-        for (NSString *fileName in childerFiles)
-        {
-            NSString *fileAbsolutePath = [cachePath stringByAppendingPathComponent:fileName];
-            long long size = [self fileSizeAtPath:fileAbsolutePath];
-            folderSize += size;
-//            NSLog(@"fileAbsolutePath=%@", fileAbsolutePath);
-            
-        }
-        //SDWebImage框架自身计算缓存的实现
-        folderSize+=[[SDImageCache sharedImageCache] getSize];
-//        NSLog(@"folderSize %f", folderSize/1024.0/1024.0);
-        return folderSize/1024.0/1024.0;
-    }
-    return 0;
-}
-
-//同样也是利用NSFileManager API进行文件操作，SDWebImage框架自己实现了清理缓存操作，我们可以直接调用。
--(void)clearCache:(NSString *)path{
-    NSString *cachePath=[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
-    cachePath=[cachePath stringByAppendingPathComponent:path];
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    if ([fileManager fileExistsAtPath:cachePath]) {
-        NSArray *childerFiles = [fileManager subpathsAtPath:cachePath];
-        for (NSString *fileName in childerFiles) {
-            //如有需要，加入条件，过滤掉不想删除的文件
-            NSString *fileAbsolutePath = [cachePath stringByAppendingPathComponent:fileName];
-            NSLog(@"fileAbsolutePath=%@",fileAbsolutePath);
-            [fileManager removeItemAtPath:fileAbsolutePath error:nil];
-        }
-    }
-    [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
-        
-    }];
-}
 
 
 @end
