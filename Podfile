@@ -11,6 +11,8 @@ pod 'Masonry', '~> 1.0.2'
 pod 'YYKit', '~> 1.0.9'
 pod 'MJExtension', '~> 3.0.13'
 pod 'LFLiveKit', '~> 2.6'
+pod 'MJRefresh', '~> 3.1.12'
+
 # U-Share SDK UI模块（分享面板，建议添加）
 pod 'UMengUShare/UI'
 

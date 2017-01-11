@@ -13,7 +13,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -55,11 +55,9 @@
     NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
     cachePath = [cachePath stringByAppendingPathComponent:path];
     long long folderSize = 0;
-    if ([fileManager fileExistsAtPath:cachePath])
-    {
+    if ([fileManager fileExistsAtPath:cachePath]) {
         NSArray *childerFiles = [fileManager subpathsAtPath:cachePath];
-        for (NSString *fileName in childerFiles)
-        {
+        for (NSString *fileName in childerFiles) {
             NSString *fileAbsolutePath = [cachePath stringByAppendingPathComponent:fileName];
             long long size = [self fileSizeAtPath:fileAbsolutePath];
             folderSize += size;
@@ -67,7 +65,7 @@
             
         }
         //SDWebImage框架自身计算缓存的实现
-        folderSize+=[[SDImageCache sharedImageCache] getSize];
+        folderSize += [[SDImageCache sharedImageCache] getSize];
         //        NSLog(@"folderSize %f", folderSize/1024.0/1024.0);
         return folderSize/1024.0/1024.0;
     }
@@ -77,7 +75,7 @@
 //同样也是利用NSFileManager API进行文件操作，SDWebImage框架自己实现了清理缓存操作，我们可以直接调用。
 -(void)clearCache {
     
-    NSString *cachePath=[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if ([fileManager fileExistsAtPath:cachePath]) {
@@ -85,7 +83,7 @@
         for (NSString *fileName in childerFiles) {
             //如有需要，加入条件，过滤掉不想删除的文件
             NSString *fileAbsolutePath = [cachePath stringByAppendingPathComponent:fileName];
-            NSLog(@"fileAbsolutePath=%@",fileAbsolutePath);
+            NSLog(@"fileAbsolutePath=%@", fileAbsolutePath);
             [fileManager removeItemAtPath:fileAbsolutePath error:nil];
         }
     }

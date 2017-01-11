@@ -18,6 +18,7 @@
  *  获取热门直播
  */
 + (void)executeGetHotLiveTaskWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure {
+    // 映客修改api接口，后面加参数才能获取
     [HttpTool getWithPath:API_LiveGetTop params:nil success:^(id json) {
         if ([json[@"dm_errer"] integerValue]) {
             failure(json);
