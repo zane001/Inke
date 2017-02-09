@@ -9,6 +9,8 @@
 #import "ZMMainViewController.h"
 #import "ZMMacros.h"
 #import "ZMMainTopView.h"
+#import "ZMSearchViewController.h"
+#import "ZMBaseNavViewController.h"
 
 @interface ZMMainViewController () <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;   // 注意设置分页、代理
@@ -55,10 +57,15 @@
 
 - (void)setupNav {
     self.navigationItem.titleView = self.topView;
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"global_search"] style:UIBarButtonItemStyleDone target:nil action:nil];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"title_button_more"] style:UIBarButtonItemStyleDone target:nil action:nil];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"global_search"] style:UIBarButtonItemStyleDone target:self action:@selector(pushSearchVC)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"title_button_mail"] style:UIBarButtonItemStyleDone target:nil action:nil];
 }
 
+- (void)pushSearchVC {
+    ZMSearchViewController *searchVC = [[ZMSearchViewController alloc]init];
+    ZMBaseNavViewController *baseNav = [[ZMBaseNavViewController alloc]initWithRootViewController:searchVC];
+    [self presentViewController:baseNav animated:YES completion:nil];
+}
 
 - (void)setupChildViewControllers {
     NSArray *vcNames = @[@"ZMFocusViewController", @"ZMHotViewController", @"ZMNearViewController"];

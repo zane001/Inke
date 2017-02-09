@@ -17,7 +17,7 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkH-cF-CDX">
                     <rect key="frame" x="325" y="30" width="19" height="22"/>
-                    <state key="normal" image="title_button_more"/>
+                    <state key="normal" image="title_button_mail"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="送出 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDy-NR-D2J">
                     <rect key="frame" x="164" y="32" width="36" height="15"/>
@@ -170,6 +170,6 @@
         <image name="global_male" width="13" height="13"/>
         <image name="global_search" width="17" height="17"/>
         <image name="me_btn_edit_h_" width="14" height="13"/>
-        <image name="title_button_more" width="19" height="17"/>
+        <image name="title_button_mail" width="19" height="17"/>
     </resources>
 </document>

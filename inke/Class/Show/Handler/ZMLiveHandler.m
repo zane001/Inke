@@ -15,6 +15,22 @@
 @implementation ZMLiveHandler
 
 /**
+ *  获取推荐
+ */
++ (void)executeGetRecommendTaskWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure {
+    [HttpTool getWithPath:API_RECOMMEND params:nil success:^(id json) {
+        if ([json[@"dm_error"] integerValue]) {
+            failure(json);
+        } else {
+            NSArray *recommends = [ZMLive mj_objectArrayWithKeyValuesArray:json[@"live_nodes"]];
+            success(recommends);
+        }
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+}
+
+/**
  *  获取热门直播
  */
 + (void)executeGetHotLiveTaskWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure {

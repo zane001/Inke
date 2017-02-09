@@ -72,6 +72,9 @@
 		988E98351DEF0F2D00C64ACD /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988E98341DEF0F2D00C64ACD /* VideoToolbox.framework */; };
 		988E98381DEF14B000C64ACD /* ZMPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 988E98371DEF14B000C64ACD /* ZMPlayerViewController.m */; };
 		989831DE1E23E38C00ED816C /* ZMClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 989831DD1E23E38C00ED816C /* ZMClearCacheCell.m */; };
+		989831E11E29B7AB00ED816C /* ZMSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 989831E01E29B7AB00ED816C /* ZMSearchViewController.m */; };
+		989831E41E2A121300ED816C /* ZMGoodVoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 989831E31E2A121300ED816C /* ZMGoodVoiceCell.m */; };
+		989831E71E2A122D00ED816C /* ZMTodayRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 989831E61E2A122D00ED816C /* ZMTodayRecommendCell.m */; };
 		989CC3651E0AE41D00D1A66B /* AppDelegate+ZMUmeng.m in Sources */ = {isa = PBXBuildFile; fileRef = 989CC3641E0AE41D00D1A66B /* AppDelegate+ZMUmeng.m */; };
 		98B74C0C1E01947B0045DCA0 /* ZMAdvertiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98B74C0B1E01947B0045DCA0 /* ZMAdvertiseViewController.xib */; };
 		98F5EC681DFC35DF00C92627 /* ZMLiveChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F5EC661DFC35DF00C92627 /* ZMLiveChatViewController.m */; };
@@ -198,6 +201,12 @@
 		988E98371DEF14B000C64ACD /* ZMPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMPlayerViewController.m; sourceTree = "<group>"; };
 		989831DC1E23E38C00ED816C /* ZMClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMClearCacheCell.h; sourceTree = "<group>"; };
 		989831DD1E23E38C00ED816C /* ZMClearCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMClearCacheCell.m; sourceTree = "<group>"; };
+		989831DF1E29B7AB00ED816C /* ZMSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMSearchViewController.h; sourceTree = "<group>"; };
+		989831E01E29B7AB00ED816C /* ZMSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMSearchViewController.m; sourceTree = "<group>"; };
+		989831E21E2A121300ED816C /* ZMGoodVoiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMGoodVoiceCell.h; sourceTree = "<group>"; };
+		989831E31E2A121300ED816C /* ZMGoodVoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMGoodVoiceCell.m; sourceTree = "<group>"; };
+		989831E51E2A122D00ED816C /* ZMTodayRecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMTodayRecommendCell.h; sourceTree = "<group>"; };
+		989831E61E2A122D00ED816C /* ZMTodayRecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMTodayRecommendCell.m; sourceTree = "<group>"; };
 		989CC3601E0AD45500D1A66B /* libLFLiveKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLFLiveKit.a; path = "../../../Library/Developer/Xcode/DerivedData/inke-aydasprowhchrggullwqxjajcnpx/Build/Products/Debug-iphonesimulator/LFLiveKit/libLFLiveKit.a"; sourceTree = "<group>"; };
 		989CC3631E0AE41D00D1A66B /* AppDelegate+ZMUmeng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+ZMUmeng.h"; sourceTree = "<group>"; };
 		989CC3641E0AE41D00D1A66B /* AppDelegate+ZMUmeng.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ZMUmeng.m"; sourceTree = "<group>"; };
@@ -610,6 +619,10 @@
 				98F5EC6F1DFEED2600C92627 /* ZMNearLiveCell.h */,
 				98F5EC701DFEED2600C92627 /* ZMNearLiveCell.m */,
 				98F5EC711DFEED2600C92627 /* ZMNearLiveCell.xib */,
+				989831E21E2A121300ED816C /* ZMGoodVoiceCell.h */,
+				989831E31E2A121300ED816C /* ZMGoodVoiceCell.m */,
+				989831E51E2A122D00ED816C /* ZMTodayRecommendCell.h */,
+				989831E61E2A122D00ED816C /* ZMTodayRecommendCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -635,6 +648,8 @@
 				984478991E10168F008E2F16 /* ZMAdvertiseViewController.h */,
 				9844789A1E10168F008E2F16 /* ZMAdvertiseViewController.m */,
 				98B74C0B1E01947B0045DCA0 /* ZMAdvertiseViewController.xib */,
+				989831DF1E29B7AB00ED816C /* ZMSearchViewController.h */,
+				989831E01E29B7AB00ED816C /* ZMSearchViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -799,10 +814,12 @@
 				98F5EC681DFC35DF00C92627 /* ZMLiveChatViewController.m in Sources */,
 				989831DE1E23E38C00ED816C /* ZMClearCacheCell.m in Sources */,
 				982098431E02D4A80099550B /* ZMCacheHelper.m in Sources */,
+				989831E11E29B7AB00ED816C /* ZMSearchViewController.m in Sources */,
 				98776CD31E0BFF2800B200DD /* ZMUserHelper.m in Sources */,
 				986B60FE1DD21A3500674D25 /* ZMHotViewController.m in Sources */,
 				988E98381DEF14B000C64ACD /* ZMPlayerViewController.m in Sources */,
 				98776CDB1E0C0DA000B200DD /* ZMMeInfoView.m in Sources */,
+				989831E41E2A121300ED816C /* ZMGoodVoiceCell.m in Sources */,
 				980118481DCE1496003978FF /* ZMBaseViewController.m in Sources */,
 				9844789B1E10168F008E2F16 /* ZMAdvertiseViewController.m in Sources */,
 				987043C41DC78BEB009765B8 /* main.m in Sources */,
@@ -816,6 +833,7 @@
 				988E980A1DEB1AB700C64ACD /* MJExtensionConfig.m in Sources */,
 				989CC3651E0AE41D00D1A66B /* AppDelegate+ZMUmeng.m in Sources */,
 				986B61071DE98CC700674D25 /* ZMMainTopView.m in Sources */,
+				989831E71E2A122D00ED816C /* ZMTodayRecommendCell.m in Sources */,
 				982098461E0630D20099550B /* ZMLaunchLiveController.m in Sources */,
 				986B610E1DE9DBED00674D25 /* HttpTool.m in Sources */,
 			);

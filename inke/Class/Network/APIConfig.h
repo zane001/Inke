@@ -32,6 +32,9 @@
 #define Live_ZM @"rtmp://live.hkstv.hk.lxdns.com:1935/live/zm"
 
 // 搜索，修改keyword即可搜索指定内容
-#define SEARCH @"api/user/search?lc=00006&cc=TG0001&cv=IK3.8.40_Iphone&proto=7&idfa=1469041DEB88&idfv=862D69E3&devi=9483987c409c&osversion=ios_10.200000&ua=iPhone7_2&imei=&imsi=&uid=100726&sid=9BS&conn=wifi&mtid=20d&mtxid=c7d71ca&logid=34,133&start=0&count=25&keyword=888&s_sg=875113bb&s_sc=100&s_st=1484144026"
+#define API_SEARCH @"api/user/search?lc=00006&cc=TG0001&cv=IK3.8.40_Iphone&proto=7&idfa=1469EB88&idfv=862D69E3&devi=9483987c409c&osversion=ios_10.200000&ua=iPhone7_2&imei=&imsi=&uid=100726&sid=9BS&conn=wifi&mtid=20d&mtxid=c7d71ca&logid=34,133&start=0&count=25&keyword=888&s_sg=875113bb&s_sc=100&s_st=1484144026"
+
+// 推荐，带经纬度参数
+#define API_RECOMMEND @"api/recommend/aggregate?lc=00006&cc=TG0001&cv=IK3.8.40_Iphone&proto=7&idfa=E14B88&idfv=84969E3&devi=92f9d0c&osversion=ios_10.200000&ua=iPhone7_2&imei=&imsi=&uid=140026&sid=2s80VsBS&conn=wifi&mtid=290b0d&mtxid=fc75ca&logid=4,133&interest=2&longitude=116.399545&latitude=39.967047&s_sg=7c592a72&s_sc=100&s_st=1484354956"
 
 @end

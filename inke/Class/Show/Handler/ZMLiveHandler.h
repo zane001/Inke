@@ -18,4 +18,7 @@
 
 + (void)executeGetAdvertiseTaskWithSuccess:(SuccessBlock)success
                                    failure:(FailureBlock)failure;
+
++ (void)executeGetRecommendTaskWithSuccess:(SuccessBlock)success
+                                   failure:(FailureBlock)failure;
 @end
